@@ -1,15 +1,17 @@
 package com.codeame;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@SpringBootTest
 public class Ejercicio1Test {
 
     private Ejercicio1 ejercicio1;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         ejercicio1 = new Ejercicio1();
     }
