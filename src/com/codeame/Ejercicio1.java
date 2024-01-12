@@ -6,7 +6,15 @@ public class Ejercicio1 {
     // Except the number 13 is very unlucky, so it does not count and numbers
     // that come immediately after a 13 also do not count.
     public int sum13(int[] nums) {
-        return 0;
+        int sum = 0;
+        if (nums != null) {
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] < 13) {
+                    sum += nums[i];
+                }
+            }
+        }
+        return sum;
     }
 
 }
