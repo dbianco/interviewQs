@@ -7,7 +7,7 @@ import unittest
             evenlySpaced(4, 6, 2) → true
             evenlySpaced(4, 6, 3) → false"""
 
-def evenlyspaced (a, b, c):     
+def evenlySpaced (a, b, c):     
     if a<b and a<c:
         small = a
         if b<c:
@@ -40,20 +40,20 @@ def evenlyspaced (a, b, c):
         result = False
            
     return result
-                
+print(evenlySpaced(2, 4, 6))                
 
 def test():
     print("testeando... ")
-    assert(evenlyspaced(2,4,6) == True), "ERROR"
-    assert(evenlyspaced(4,6,2) == True), "ERROR"
-    assert(evenlyspaced(4,6,3) == False), "ERROR"
+    assert(evenlySpaced(2,4,6) == True), "ERROR"
+    assert(evenlySpaced(4,6,2) == True), "ERROR"
+    assert(evenlySpaced(4,6,3) == False), "ERROR"
     print("Pasó chango")
 
 test()
 
 class Test(unittest.TestCase):
     def test_(self):
-        self.assertEqual(evenlyspaced(2, 4, 6), True)
+        self.assertEqual(evenlySpaced(2, 4, 6), True)
 
 if __name__ == '__main__':
     unittest.main()
