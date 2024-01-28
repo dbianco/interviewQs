@@ -5,19 +5,16 @@
     Sample: wordEnds("abcXY123XYijk", "XY") → "c13i"
 
     """
-def wordEnds(a, b):
+def wordEnds(cadena, palabra):
     indice = -1
-    lista = []
-    lista_a = list(a)
-    if b in a: #Saber si la palabra está en la cadena. Si está, la transformo en lista.
-        listaA = list(a)
-        listaB = list(b)
-        for i in lista_a:
+    largo= len(palabra)
+    if palabra in cadena:
+        result = ""
+        for i in cadena:
             indice += 1
-            if i in listaB:
-                listaA.remove(i)
-                                
-    return listaA
-print(wordEnds("abcXY123XYijk", "XY"))
+            if i == palabra[0] and cadena[indice:indice+largo] == palabra:
+                result += cadena[indice-1]+cadena[indice+largo]
+    return result
+print(wordEnds("encuent5aralst7palabra3estuppalabras", "palabra"))
 
  
